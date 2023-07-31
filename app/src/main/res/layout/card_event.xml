@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardEvent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/common_spacing"
+    app:cardCornerRadius="@dimen/spacing_s"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/spacing_xs">
+
+        <TextView
+            android:id="@+id/textViewAuthor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/spacing_s"
+            android:layout_marginEnd="@dimen/spacing_s"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textSize="@dimen/profile_user_name_text_size"
+            app:layout_constraintBottom_toTopOf="@+id/textViewPublished"
+            app:layout_constraintEnd_toStartOf="@id/buttonMenu"
+            app:layout_constraintStart_toEndOf="@id/imageViewAvatar"
+            app:layout_constraintTop_toTopOf="@+id/imageViewAvatar"
+            tools:text="@sample/posts.json/data/author" />
+
+        <TextView
+            android:id="@+id/textViewPublished"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_s"
+            android:layout_marginEnd="@dimen/spacing_s"
+            android:singleLine="true"
+            android:textSize="@dimen/dateTimeTextSize"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewAvatar"
+            app:layout_constraintEnd_toStartOf="@+id/buttonMenu"
+            app:layout_constraintStart_toEndOf="@+id/imageViewAvatar"
+            app:layout_constraintTop_toBottomOf="@id/textViewAuthor"
+            tools:text="@sample/posts.json/data/published" />
+
+        <ImageView
+            android:id="@+id/imageViewAvatar"
+            android:layout_width="@dimen/posts_avatar_size"
+            android:layout_height="@dimen/posts_avatar_size"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/description_event_author_avatar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/ic_baseline_person_24" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonMenu"
+            style="@style/Widget.App.MenuCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:checkable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierTopMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:barrierMargin="@dimen/common_spacing"
+            app:constraint_referenced_ids="imageViewAvatar, textViewPublished" />
+
+        <TextView
+            android:id="@+id/textViewContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_s"
+            android:autoLink="web"
+            app:layout_constraintBottom_toTopOf="@+id/imageViewAttachmentImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrierTopMenu"
+            tools:text="@sample/posts.json/data/content" />
+
+        <ImageView
+            android:id="@+id/imageViewAttachmentImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/spacing_s"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/description_event_attachment"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewContent"
+            tools:layout_height="@dimen/sign_avatar_size"
+            tools:layout_width="@dimen/sign_avatar_size"
+            tools:srcCompat="@tools:sample/avatars[3]"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/textViewDateTimeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_s"
+            android:text="@string/text_event_date"
+            android:textAllCaps="false"
+            android:textSize="@dimen/dateTimeTextSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageViewAttachmentImage" />
+
+        <TextView
+            android:id="@+id/textViewDateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_s"
+            android:textSize="@dimen/dateTimeTextSize"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textViewDateTimeText"
+            app:layout_constraintStart_toEndOf="@+id/textViewDateTimeText"
+            tools:text="@tools:sample/date/ddmmyy" />
+
+        <TextView
+            android:id="@+id/textViewTypeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_s"
+
+            android:text="@string/text_event_type"
+            android:textAllCaps="false"
+            android:textSize="@dimen/dateTimeTextSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewDateTimeText" />
+
+        <TextView
+            android:id="@+id/textViewType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_s"
+            android:textSize="@dimen/dateTimeTextSize"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textViewTypeText"
+            app:layout_constraintStart_toEndOf="@id/textViewTypeText"
+            tools:text="Offline" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/checkboxSpeakers"
+            style="@style/Widget.AppTheme.SpeakersCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonLink" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonLocation"
+            style="@style/Widget.App.Location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:checkable="true"
+            app:layout_constraintBottom_toBottomOf="@+id/checkboxSpeakers"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/checkboxSpeakers" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonLink"
+            style="@style/Widget.App.Link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:checkable="true"
+            android:autoLink="web"
+            android:text="@string/text_link"
+            android:textAlignment="textStart"
+            app:iconPadding="@dimen/common_spacing"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTypeText" />
+
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierBottomMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:barrierMargin="@dimen/spacing_s"
+            app:constraint_referenced_ids="
+            textViewContent,
+            imageViewAttachmentImage,
+            checkboxSpeakers,
+            textViewDateTime" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonLike"
+            style="@style/Widget.AppTheme.LikeCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xs"
+            android:checkable="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/barrierBottomMenu" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonParticipate"
+            style="@style/Widget.AppTheme.ParticipateCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_s"
+            android:checkable="true"
+            app:layout_constraintBottom_toBottomOf="@id/buttonLike"
+            app:layout_constraintStart_toEndOf="@+id/buttonLike"
+            app:layout_constraintTop_toTopOf="@+id/buttonLike" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonShare"
+            style="@style/Widget.AppTheme.ShareCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_s"
+            android:checkable="true"
+            android:contentDescription="@string/description_share"
+            app:layout_constraintBottom_toBottomOf="@id/buttonLike"
+            app:layout_constraintStart_toEndOf="@+id/buttonParticipate"
+            app:layout_constraintTop_toTopOf="@+id/buttonLike"
+            tools:text="500" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

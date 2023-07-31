@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name" translatable="false">laliApp</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_feed">Feed</string>
+    <string name="title_users">Users</string>
+    <string name="title_events">Events</string>
+    <string name="title_jobs">Jobs</string>
+    <string name="title_post">Post</string>
+    <string name="title_user">User</string>
+    <string name="title_event">Event</string>
+    <string name="title_job">Job</string>
+    <string name="title_new_post">New Post</string>
+    <string name="title_new_event">New Event</string>
+    <string name="title_new_job">New Job</string>
+    <string name="title_wall">Wall</string>
+    <string name="title_bottom_sheet">Bottom Sheet</string>
+    <string name="title_map">Map</string>
+    <string name="sign_login">Login</string>
+    <string name="sign_password">Password</string>
+    <string name="sign_repeat_password">Repeat Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="sign_in_name">Authorization</string>
+    <string name="sign_up_name">Registration</string>
+    <string name="sign_user_name">User Name</string>
+    <string name="sign_in_and_out">Sign In / Sign Out</string>
+    <string name="error_login">Wrong Login or Password</string>
+    <string name="error_auth">You are not authorized</string>
+    <string name="error_password">Password mismatch</string>
+    <string name="error_loading">Loading problem!\nPlease check Network connection.</string>
+    <string name="error_empty_post">Can\'t create empty Post</string>
+    <string name="error_empty_content">Content is empty</string>
+    <string name="error_field_required">Fields must be filled</string>
+    <string name="avatar_user">Avatar User</string>
+    <string name="create_account">Create account</string>
+    <string name="text_new_post">New Post text</string>
+    <string name="text_new_event">New Event text</string>
+    <string name="text_event_date">Event date :</string>
+    <string name="text_new_event_date">Date : </string>
+    <string name="text_new_event_time">Time : </string>
+    <string name="text_job_name">Company : </string>
+    <string name="textJobPosition">Position : </string>
+    <string name="text_job_start">From :</string>
+    <string name="text_job_finish">To : </string>
+    <string name="text_job_now">now</string>
+    <string name="text_link">Site</string>
+    <string name="like">Like</string>
+    <string name="mention">Mention</string>
+    <string name="empty_posts">There are no posts.\nIf you create a new post, it will appear here</string>
+    <string name="empty_events">There are no events.\nIf you create a new event, it will appear here</string>
+    <string name="empty_jobs">There are no jobs.\nIf you create a new job, it will appear here</string>
+    <string name="retry">Retry</string>
+    <string name="ok">OK</string>
+    <string name="save">Save</string>
+    <string name="clear">Clear</string>
+    <string name="post_menu_edit">Edit</string>
+    <string name="post_menu_remove">Remove</string>
+    <string name="participate">Participate</string>
+    <string name="speakers">Speakers</string>
+    <string name="add_speakers">Speakers + </string>
+    <string name="no_speakers">No Speakers</string>
+    <string name="no_likers">No likes Owners</string>
+    <string name="no_participants">No Participants</string>
+    <string name="no_mentions">No Mentions</string>
+    <string name="no_play">No Play</string>
+    <string name="no_location">No access to location</string>
+    <string name="plus_button">Plus</string>
+    <string name="minus_button">Minus</string>
+    <string name="location_button">Location</string>
+    <string name="set_point_button">Set point</string>
+    <string name="set_marker">Set geolocation</string>
+    <string name="channel_remote_description">Notifications from remote server</string>
+    <string name="channel_remote_name">Server notifications</string>
+    <string name="google_play_unavailable">Google API Unavailable</string>
+    <string name="description_fab_add" translatable="false" />
+    <string name="description_post_author_avatar" translatable="false" />
+    <string name="description_post_attachment" translatable="false" />
+    <string name="description_share" translatable="false" />
+    <string name="description_view" translatable="false" />
+    <string name="description_mention" translatable="false" />
+    <string name="description_play" translatable="false" />
+    <string name="description_photo" translatable="false" />
+    <string name="description_take_photo" translatable="false" />
+    <string name="description_pick_photo" translatable="false" />
+    <string name="description_event_author_avatar" translatable="false" />
+    <string name="description_event_attachment" translatable="false" />
+    <string name="description_image_full_screen" translatable="false" />
+    <string name="error_no_permission">You haven\'t permission for this action</string>
+    <string name="app_logo" translatable="false">Like A LinkedIn</string>
+    <string name="map_plus">Zoom plus</string>
+    <string name="map_minus">Zoom minus</string>
+    <string name="online_event">Online event</string>
+    <string name="offline_event">Offline event</string>
+    <string name="text_event_type">Event type</string>
+
+</resources>

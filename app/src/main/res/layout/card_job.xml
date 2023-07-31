@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardJob"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/common_spacing"
+    app:cardCornerRadius="@dimen/spacing_s"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/spacing_xs">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonMenu"
+            style="@style/Widget.App.MenuCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:checkable="true"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewNameText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textViewNameText" />
+
+        <TextView
+            android:id="@+id/textViewNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_s"
+            android:layout_marginTop="@dimen/spacing_s"
+            android:text="@string/text_job_name"
+            android:textAllCaps="false"
+            android:textSize="@dimen/dateTimeTextSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_s"
+            android:textSize="@dimen/dateTimeTextSize"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textViewNameText"
+            app:layout_constraintStart_toEndOf="@+id/textViewNameText"
+            tools:text="Netology" />
+
+        <TextView
+            android:id="@+id/textViewPositionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_s"
+            android:text="@string/textJobPosition"
+            android:textAllCaps="false"
+            android:textSize="@dimen/dateTimeTextSize"
+            app:layout_constraintStart_toStartOf="@+id/textViewNameText"
+            app:layout_constraintTop_toBottomOf="@id/textViewNameText" />
+
+        <TextView
+            android:id="@+id/textViewPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_s"
+            android:textSize="@dimen/dateTimeTextSize"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textViewPositionText"
+            app:layout_constraintStart_toEndOf="@+id/textViewPositionText"
+            tools:text="Student" />
+
+        <TextView
+            android:id="@+id/textViewStartText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_s"
+            android:text="@string/text_job_start"
+            android:textAllCaps="false"
+            android:textSize="@dimen/dateTimeTextSize"
+            app:layout_constraintStart_toStartOf="@+id/textViewNameText"
+            app:layout_constraintTop_toBottomOf="@id/textViewPositionText" />
+
+        <TextView
+            android:id="@+id/textViewStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_s"
+            android:textSize="@dimen/dateTimeTextSize"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textViewStartText"
+            app:layout_constraintStart_toEndOf="@+id/textViewStartText"
+            tools:text="2021-11" />
+
+        <TextView
+            android:id="@+id/textViewFinishText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_s"
+            android:layout_marginStart="@dimen/common_spacing"
+            android:text="@string/text_job_finish"
+            android:textAllCaps="false"
+            android:textSize="@dimen/dateTimeTextSize"
+            app:layout_constraintStart_toEndOf="@id/textViewStart"
+            app:layout_constraintTop_toBottomOf="@id/textViewPositionText" />
+
+        <TextView
+            android:id="@+id/textViewFinish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_s"
+            android:textSize="@dimen/dateTimeTextSize"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textViewFinishText"
+            app:layout_constraintStart_toEndOf="@+id/textViewFinishText"
+            tools:text="2023-03" />
+
+        <TextView
+            android:id="@+id/textViewLinkText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_s"
+            android:text="@string/text_link"
+            android:textAllCaps="false"
+            android:textSize="@dimen/dateTimeTextSize"
+            app:layout_constraintStart_toStartOf="@+id/textViewNameText"
+            app:layout_constraintTop_toBottomOf="@id/textViewFinishText" />
+
+        <TextView
+            android:id="@+id/textViewLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_s"
+            android:autoLink="web"
+            android:textSize="@dimen/dateTimeTextSize"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textViewLinkText"
+            app:layout_constraintStart_toEndOf="@+id/textViewLinkText"
+            tools:text="https://netology.ru" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

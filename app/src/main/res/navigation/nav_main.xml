@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/nav_feed">
+
+    <fragment
+        android:id="@+id/nav_feed"
+        android:name="ru.netology.laliapp.ui.PostsFragment"
+        android:label="@string/title_feed"
+        tools:layout="@layout/fragment_posts">
+
+        <action
+            android:id="@+id/action_nav_posts_to_nav_bottom_sheet_fragment"
+            app:destination="@+id/nav_bottom_sheet_fragment" />
+        <action
+            android:id="@+id/action_nav_feed_to_nav_new_post_fragment"
+            app:destination="@id/nav_new_post_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_users"
+        android:name="ru.netology.laliapp.ui.UsersFragment"
+        android:label="@string/title_users"
+        tools:layout="@layout/fragment_users" />
+
+    <fragment
+        android:id="@+id/nav_events"
+        android:name="ru.netology.laliapp.ui.EventsFragment"
+        android:label="@string/title_events"
+        tools:layout="@layout/fragment_events">
+        <action
+            android:id="@+id/action_nav_events_to_nav_bottom_sheet_fragment"
+            app:destination="@+id/nav_bottom_sheet_fragment" />
+        <action
+            android:id="@+id/action_nav_events_to_nav_new_event_fragment"
+            app:destination="@id/nav_new_event_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_jobs"
+        android:name="ru.netology.laliapp.ui.JobsFragment"
+        android:label="@string/title_jobs"
+        tools:layout="@layout/fragment_jobs" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="ru.netology.laliapp.ui.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_nav_profile_to_new_post_fragment"
+            app:destination="@+id/nav_new_post_fragment" />
+        <action
+            android:id="@+id/action_nav_profile_to_new_event_fragment"
+            app:destination="@+id/nav_new_event_fragment" />
+        <action
+            android:id="@+id/action_nav_profile_to_new_job_fragment"
+            app:destination="@+id/nav_new_job_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_new_post_fragment"
+        android:name="ru.netology.laliapp.ui.NewPostFragment"
+        android:label="@string/title_new_post"
+        tools:layout="@layout/fragment_new_post" />
+
+    <fragment
+        android:id="@+id/nav_new_event_fragment"
+        android:name="ru.netology.laliapp.ui.NewEventFragment"
+        android:label="@string/title_new_event"
+        tools:layout="@layout/fragment_new_event" />
+
+    <fragment
+        android:id="@+id/nav_new_job_fragment"
+        android:name="ru.netology.laliapp.ui.NewJobFragment"
+        android:label="@string/title_new_job"
+        tools:layout="@layout/fragment_new_job" />
+
+    <fragment
+        android:id="@+id/nav_wall_fragment"
+        android:name="ru.netology.laliapp.ui.WallFragment"
+        android:label="@string/title_wall"
+        tools:layout="@layout/fragment_wall">
+        <action
+            android:id="@+id/action_nav_wall_fragment_to_nav_bottom_sheet_fragment"
+            app:destination="@+id/nav_bottom_sheet_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_map_fragment"
+        android:name="ru.netology.laliapp.ui.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" />
+
+    <fragment
+        android:id="@+id/nav_image_attachment_fragment"
+        android:name="ru.netology.laliapp.ui.ImageAttachmentFragment"
+        android:label="fragment_image_attachment"
+        tools:layout="@layout/fragment_image_attachment" />
+
+    <fragment
+        android:id="@+id/nav_sign_in_fragment"
+        android:name="ru.netology.laliapp.ui.SignInFragment"
+        android:label="@string/sign_in"
+        tools:layout="@layout/fragment_sign_in">
+        <action
+            android:id="@+id/action_nav_sign_in_fragment_to_nav_app_activity"
+            app:destination="@+id/nav_app_activity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_sign_up_fragment"
+        android:name="ru.netology.laliapp.ui.SignUpFragment"
+        android:label="@string/sign_up"
+        tools:layout="@layout/fragment_sign_up">
+        <action
+            android:id="@+id/action_nav_sign_up_fragment_to_nav_app_activity"
+            app:destination="@+id/nav_app_activity" />
+        <action
+            android:id="@+id/action_nav_sign_up_fragment_to_nav_profile_fragment"
+            app:destination="@+id/nav_profile" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/nav_bottom_sheet_fragment"
+        android:name="ru.netology.laliapp.ui.BottomSheetFragment"
+        android:label="@string/title_bottom_sheet"
+        tools:layout="@layout/fragment_bottom_sheet" />
+
+    <activity
+        android:id="@+id/nav_app_activity"
+        android:name="ru.netology.laliapp.activity.AppActivity"
+        android:label="AppActivity" />
+
+</navigation>

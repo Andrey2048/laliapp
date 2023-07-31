@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.NewPostFragment">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="@dimen/spacing_l"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editTextContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_xs"
+                android:layout_marginTop="@dimen/common_spacing"
+                android:gravity="start|top"
+                android:hint="@string/text_new_post"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine"
+                android:padding="@dimen/spacing_s"
+                tools:ignore="MissingConstraints"
+                tools:text="@tools:sample/lorem[50]" />
+
+            <FrameLayout
+                android:id="@+id/frameLayoutMedia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/imageViewPhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/description_photo"
+                    tools:srcCompat="@tools:sample/avatars[2]" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonRemovePhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:text="@string/clear"
+                    android:textAllCaps="false"
+                    app:cornerRadius="@dimen/button_corner_radius" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!--    <com.google.android.material.bottomappbar.BottomAppBar-->
+    <!--        android:id="@+id/bottom_app_bar"-->
+    <!--        style="@style/Widget.MaterialComponents.BottomAppBar"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="bottom"-->
+    <!--        android:backgroundTint="@color/purple_500"-->
+    <!--        tools:ignore="BottomAppBar" />-->
+
+    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+    <!--        android:id="@+id/fab_ok"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:layout_anchor="@id/bottom_app_bar"-->
+    <!--        app:srcCompat="@drawable/ic_baseline_check_24" />-->
+
+    <LinearLayout
+        android:id="@+id/bottomAppBar"
+        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageViewTakePhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:contentDescription="@string/description_take_photo"
+            android:padding="@dimen/common_spacing"
+            android:src="@drawable/ic_baseline_photo_camera_48" />
+
+        <ImageView
+            android:id="@+id/imageViewPickPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:contentDescription="@string/description_pick_photo"
+            android:padding="@dimen/common_spacing"
+            android:src="@drawable/ic_baseline_photo_48" />
+
+        <ImageView
+            android:id="@+id/imageViewPickAudio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:contentDescription="@string/description_pick_photo"
+            android:padding="@dimen/common_spacing"
+            android:src="@drawable/ic_outline_audio_file_48" />
+
+        <ImageView
+            android:id="@+id/imageViewPickVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:contentDescription="@string/description_pick_photo"
+            android:padding="@dimen/common_spacing"
+            android:src="@drawable/ic_baseline_video_file_48" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
