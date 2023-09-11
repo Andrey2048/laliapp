@@ -48,7 +48,7 @@
                 android:layout_height="@dimen/sign_avatar_size"
                 android:layout_marginTop="@dimen/sign_spacing_l"
                 android:contentDescription="@string/avatar_user"
-                android:background="@drawable/ic_baseline_person_add_24"
+                android:src="@drawable/ic_baseline_person_add_24"
                 app:layout_constraintBottom_toTopOf="@id/textFieldLogin"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
